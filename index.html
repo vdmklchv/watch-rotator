@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Luxury Watch Tournament</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: "#d4af37",
+                        darkbg: "#0f0f12"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-darkbg text-white min-h-screen flex justify-center py-12">
+
+<div class="w-full max-w-4xl px-6">
+
+    <h1 class="title-font text-4xl text-gold text-center mb-10 tracking-wide">
+        🏆 Luxury Watch Tournament
+    </h1>
+
+    <div class="text-center mb-8">
+        <button id="startBtn"
+            class="px-8 py-3 border-2 border-gold text-gold rounded-lg
+                   hover:bg-gold hover:text-black transition duration-300">
+            Запустить турнир
+        </button>
+    </div>
+
+    <!-- SPINNER -->
+    <div class="flex justify-center mb-10">
+        <div class="spinner-wrapper">
+            <div class="pointer"></div>
+            <div id="spinner" class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6 shadow-2xl">
+
+        <div id="roundLog"
+             class="max-h-64 overflow-y-auto space-y-2 text-sm mb-6">
+        </div>
+
+        <div id="champion"
+             class="text-center text-2xl text-gold font-semibold mb-6">
+        </div>
+
+        <div id="stats" class="text-sm"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
