@@ -13,11 +13,17 @@ body {
 }
 
 /* Spinner */
-
 .spinner-wrapper {
     position: relative;
     width: 220px;
     height: 220px;
+}
+
+@media (max-width: 640px) {
+    .spinner-wrapper {
+        width: 180px;
+        height: 180px;
+    }
 }
 
 .spinner {
@@ -41,8 +47,15 @@ body {
     border-bottom: 20px solid #d4af37;
 }
 
-/* Log */
+@media (max-width: 640px) {
+    .pointer {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 16px solid #d4af37;
+    }
+}
 
+/* Round log */
 .round-entry {
     padding: 6px 0;
     border-bottom: 1px solid rgba(255,255,255,0.08);
